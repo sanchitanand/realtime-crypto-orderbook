@@ -1,0 +1,102 @@
+*{
+  font-family:Helvetica;
+}
+ th, td {
+    border: 1px solid #ddd;
+    height:20px;
+  padding:5px;
+    }
+
+th
+{
+  background-color:#3F51B5;
+  color:white;
+}
+tr:nth-child(odd)
+{
+  background-color:#C5CAE9;
+}
+tr:hover
+{
+  background-color:#8C9EFF;
+}
+table 
+{
+   margin: 0 auto;
+  text-align: center;
+  width:100%;
+  border-collapse:collapse;
+  overflow-y:scroll;
+}
+select
+{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  position:relative;
+  float:left;
+  background:#E8EAF6;
+
+  height:34px;
+  padding:0px 10px 0px 10px;
+  margin:5px;
+   height:100%;
+   border: 1px solid #41533f;
+  
+}
+.table-container
+{
+  height:100%;
+  width: 100%;
+  display:flex;
+}
+
+.PageSize{
+  font-size:14px;
+  margin:0 auto;
+  text-align: center;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction:column;
+
+}
+.thin-column
+{
+  width:25%;
+}
+
+.thick-column
+{
+  width:75%;
+}
+
+.leftDiv
+{ 
+  
+  width:50%;
+  
+}
+
+.rightDiv
+{
+  width:50%;
+}
+.styled-select
+{
+  margin:0 auto;
+  display:flex;
+}
+
+ .banner{
+  text-align:center;
+  background-color:#3F51B5;
+  color:white;
+ }
+.main-select
+{
+  margin:auto;
+  flex-direction: column;
+}

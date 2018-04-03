@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular App</title>
+	<script src="angular.js"></script>
+	<script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+
+
+
+<body ng-app="demoApp">
+	<div class="container" ng-controller='SimpleController'>
+		<div class="banner">
+		<h2>Websocket Orderbook App</h2>
+	</div>
+    <div class="main-select">
+
+		<select ng-model="pair" ng-options="p for p in pairs">
+		</select>
+    </div>
+		<div class="table-container">
+			<div class="leftDiv">
+			<table>
+				<thead>
+            <div class="styled-select">Results <select ng-model="bidLimit" ng-options="s for s in size">
+					</select>
+            </div>
+					<tr><th class="thin-column">Size</th><th class="thick-column">Bid</th></tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat ="bid in bids | orderBy :'-price' | limitTo : bidLimit"><td class="thin-column">{{bid.size | number : 3}}</td><td class="thick-column">{{bid.price}}</td></tr>
+				</tbody>
+			</table>
+			</div>
+			<div class = "rightDiv">
+				<table>
+				<thead>
+            <div class="styled-select">Results <select ng-model="askLimit" ng-options="s for s in size">
+					</select>
+					</div>
+					<tr><th class="thick-column">Ask</th><th class="thin-column">Size</th></tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat ="ask in asks | orderBy : 'price' | limitTo: askLimit"><td class="thick-column">{{ask.price}}</td><td class="thin-column">{{ask.size | number : 3}}</td></tr>
+				</tbody>
+			</table>
+			</div>
+		</div>
+	</div>
+
+</body>
+
